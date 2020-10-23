@@ -10,7 +10,8 @@ function capitalize(text) {
 }
 
 function camelCase(text) {
-    return capitalize(text).replace(/\W/g, "");
+    if (typeof text !== "string" || text === "") return "";
+    return capitalize(text.replace(/_/g, ' ')).replace(/\W/g, "");
 }
 
 function snakeCase(text) {
@@ -57,7 +58,7 @@ console.log(ucfirst("bonjour la france"));
 console.log(capitalize("bonjour la france"));
 
 // Toutes les 1ères lettres des mots en majuscules + mots collés
-console.log(camelCase("bonjour la france"));
+console.log(camelCase("toggleCase is the coolest"));
 
 // Cryptage LEET
 console.log(leet("anaconda"));
