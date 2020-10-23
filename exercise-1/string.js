@@ -16,7 +16,7 @@ function camelCase(text) {
 
 function snake_case(text) {
     if (typeof text !== "string" || text === "") return "";
-    return text.replace(/ /g, '_');
+    return text.replace(/ /g, '_').toLowerCase();
 }
 
 function leet(text) {
@@ -60,7 +60,7 @@ console.log(capitalize("bonjour la france"));
 // Toutes les 1ères lettres des mots en majuscules + mots collés
 console.log(camelCase("toggleCase is the coolest"));
 
-console.log(snake_case("toggle case is the coolest"));
+console.log(snake_case("toggleCase is the coolest"));
 
 // Cryptage LEET
 console.log(leet("anaconda"));
