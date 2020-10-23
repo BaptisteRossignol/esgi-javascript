@@ -48,6 +48,7 @@ function verlan(text) {
 }
 
 function yoda(text) {
+    if (typeof text !== "string" || text === "") return "";
     return text.split(" ").reverse().join(" ");
 }
 
