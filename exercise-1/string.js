@@ -60,6 +60,8 @@ console.log(capitalize("bonjour la france"));
 // Toutes les 1ères lettres des mots en majuscules + mots collés
 console.log(camelCase("toggleCase is the coolest"));
 
+console.log(snake_case("toggle case is the coolest"));
+
 // Cryptage LEET
 console.log(leet("anaconda"));
 
