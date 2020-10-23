@@ -28,8 +28,8 @@ function leet(text) {
 }
 
 function prop_access(element, text) {
-    if (typeof text !== "string" || text.length == 0) return text + " not exist";
-    if (typeof element !== "object" || element == null) return element + " not exist";
+    if (typeof text !== "string" || text.length == 0) return element;
+    if (typeof element !== "object" || element == null) return text + " not exist";
   
     text.split('.').map(function (prop) {
         if (!element.hasOwnProperty(prop)) return element = prop + " not exist";
@@ -76,7 +76,7 @@ var prairie = {
         }
     }
 };
-console.log(prop_access(prairie,'animal.type'));
+console.log(prop_access(prairie,'animal.gender'));
 
 // Verlan
 console.log(verlan("bonjour le monde"));
