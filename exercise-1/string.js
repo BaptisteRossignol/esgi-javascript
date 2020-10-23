@@ -14,7 +14,7 @@ function camelCase(text) {
     return capitalize(text.replace(/_/g, ' ')).replace(/\W/g, "");
 }
 
-function snakeCase(text) {
+function snake_case(text) {
     if (typeof text !== "string" || text === "") return "";
     return text.replace(/ /g, '_');
 }
