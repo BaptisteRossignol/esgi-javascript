@@ -28,8 +28,8 @@ function leet(text) {
 }
 
 function prop_access(element, text) {
+    if (typeof element !== "object" || element == null) return element + " not exist";
     if (typeof text !== "string" || text.length == 0) return element;
-    if (typeof element !== "object" || element == null) return text + " not exist";
   
     text.split('.').map(function (prop) {
         if (!element.hasOwnProperty(prop)) return element = prop + " not exist";
@@ -67,16 +67,8 @@ console.log(snake_case("toggleCase is the coolest"));
 console.log(leet("anaconda"));
 
 // Property access
-var prairie = {
-    'animal':
-    {
-        'type':
-        {
-            'name':'chien'
-        }
-    }
-};
-console.log(prop_access(prairie,'animal.gender'));
+var prairie = {'animal':{'type':{'name':'chien'}}};
+console.log(prop_access(prairie, "animal.gender"));
 
 // Verlan
 console.log(verlan("bonjour le monde"));
