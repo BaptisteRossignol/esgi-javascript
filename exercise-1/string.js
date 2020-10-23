@@ -35,7 +35,7 @@ function prop_access(element, text) {
     }
   
     text.split('.').map(function (prop) {
-        if (!element.hasOwnProperty(prop)) return element = prop + " not exist";
+        if (!element.hasOwnProperty(prop)) return element = text + " not exist";
         element = element[prop];
     });
 
