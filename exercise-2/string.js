@@ -49,13 +49,12 @@ function type_check(data, config) {
     if (type_check_v1(data, config.type)) {
         if (config.hasOwnProperty("properties")) {
             for (key in config.properties) {
-                if (config.properties[key].hasOwnProperty("properties") && !type_check(data[key], config.properties[key]) || !type_check_v2(data[key], config.properties[key])) {
+                if (config.properties[key].hasOwnProperty("properties") && !type_check(data[key], config.properties[key]) 
+                || !type_check_v2(data[key], config.properties[key])) {
                     return false; 
                 }
             }
-        } else {
-            if (!type_check_v2(data, config)) return false; 
-        }
+        } else if (!type_check_v2(data, config)) return false;
 
         return true;
     }
