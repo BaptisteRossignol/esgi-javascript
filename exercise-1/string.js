@@ -29,11 +29,11 @@ function leet(text) {
 
 function prop_access(element, text) {
     if (typeof text !== "string" || text.length == 0) return element;
-    if(typeof element !== "object" || element == null) {
+    if (typeof element !== "object" || element == null) {
         console.log(text + " not exist");
         return;
     }
-  
+
     text.split('.').map(function (prop) {
         if (!element.hasOwnProperty(prop)) return element = text + " not exist";
         element = element[prop];
